@@ -16,11 +16,4 @@ angular.module('ahorcado.ahorcadoDirective', []).
             }
         };
     });
-/* return {
- scope: {
- word: "&"
- },
- template: '<input type="text" id="{{letra.id}}" word  autocomplete="off" ng-disabled="letra.visible" class="form-control" name="palabra" ng-model="letra.letra" />' +
- '<input type="button" ng-click="dial({message:value})" value="Call home!">'
-
- }*/
+    });
