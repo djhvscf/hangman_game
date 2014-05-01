@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="ahorcado" class="ng-app:ahorcado" id="ng-app">
+<head>
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular.js" ng:autobind></script>
+    <script src="js/app.js" ng:autobind></script>
+    <script src="js/wordsStackService.js" ng:autobind></script>
+    <script src="js/generalService.js" ng:autobind></script>
+    <script src="js/ahorcadoController.js" ng:autobind></script>
+    <script src="js/ahorcadoDirective.js" ng:autobind></script>
+    <script src="js/jquery.noty.packaged.min.js" ng:autobind></script>
+</head>
+<body ng-controller="ahorcadoController">
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-1">
+        <form class="form-vertical" name="noteForm">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Ahorcado - Intentos generales: {{intentosGenerales}}</legend>
+                <!-- Text input-->
+                <div class="form-group" ng-repeat="letra in letras">
+                    <label class="col-sm-2 control-label" for="textinput">Letra {{$index + 1}}</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="{{letra.id}}" ahorcado-maxlength="1" autocomplete="off" ng-disabled="letra.visible" class="form-control" name="palabra" ng-model="letra.letra"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="pull-right">
+                            <button type="submit" class="btn btn-primary pull-left" style="margin-top: 5%;" ng-disabled="!noteForm.$valid" ng-click="evaluar()">Evaluar palabra</button>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div><!-- /.col-lg-12 -->
+</div><!-- /.row -->
+</body>
+</html>
