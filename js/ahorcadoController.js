@@ -46,10 +46,13 @@ var ahorcadoController = function($scope, wordsStackService, generalService, $ti
             $scope.indexPalabra += 1;
             if($scope.indexPalabra == wordsStackService.getLengthWordsStack())
             {
+				var ganarJuego = function() {
+                    $scope.cleanVariables();
+                };
+
                 generalService.generateNoty('Ganaste el juego', 'success');
-                $scope.palabraActual = null;
-                $scope.letras = [];
-                $scope.init();
+                $timeout(ganarJuego, 3000);
+				
             }else
             {
                 var nuevaPalabra = function() {
@@ -68,9 +71,11 @@ var ahorcadoController = function($scope, wordsStackService, generalService, $ti
 
             if($scope.intentosGenerales === 3)
             {
-                $scope.intentosGenerales = 0;
-                $scope.indexPalabra = 0;
-                generalService.generateNoty('Máximo de intentos fallidos', 'error');
+				var regresarAlInicio = function() {
+                    $scope.cleanVariables();
+                };
+                generalService.generateNoty('Maximo de intentos fallidos, volvemos al inicio', 'error');
+				$timeout(regresarAlInicio, 3000);
             }
             else
             {
@@ -78,6 +83,15 @@ var ahorcadoController = function($scope, wordsStackService, generalService, $ti
             }
         }
     };
+	
+	$scope.cleanVariables = function()
+	{
+		$scope.palabraActual = null;
+		$scope.letras = [];
+		$scope.intentosGenerales = 0;
+		$scope.indexPalabra = 0;
+		$scope.init();
+	};
 
     $scope.init();
 };

@@ -8,12 +8,15 @@ angular.module('ahorcado.ahorcadoDirective', []).
             require: 'ngModel',
             link: function (scope, element, attrs, ahorcadoController) {
                 var maxlength = Number(attrs.ahorcadoMaxlength);
+				var element = element;
                 function fromUser(text) {
-                    ahorcadoController.$setValidity('unique', text.length <= maxlength);
+					text = text.substr(0,1);
+					var textActual = $('#'+element[0].id)[0];
+					textActual.value = text;
+					ahorcadoController.$setValidity('unique', text.length <= maxlength);
                     return text;
                 }
                 ahorcadoController.$parsers.push(fromUser);
             }
         };
-    });
     });
