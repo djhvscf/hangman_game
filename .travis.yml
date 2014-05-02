@@ -4,7 +4,6 @@ before_install:
   - sudo apt-get -y update
 install:
   - sudo apt-get -y install nodejs
-  - sudo npm install -g grunt-cli
   - sudo npm install -g bower
   - travis_retry gem install compass
   - npm set tmp .npm-tmp
