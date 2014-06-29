@@ -6,8 +6,8 @@ var app = angular.module('ahorcado', ['ahorcado.wordsStackService', 'ahorcado.ah
 
 app.config(function ($routeProvider, $provide, $httpProvider){
 
-    $routeProvider.when('/ahorcado.html', {
-        templateUrl: 'ahorcado',
+    $routeProvider.when('/hangman.html', {
+        templateUrl: '/hangman.html',
         controller: 'ahorcadoController'
     });
 });

@@ -1,1 +1,4 @@
 language: javascript
+notifications:
+  email:
+    - djhv92@hotmail.com
