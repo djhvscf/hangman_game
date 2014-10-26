@@ -1,5 +1,5 @@
 hangman_game
 ============
-![Build status](https://travis-ci.org/djhvscf/hangman_game.svg?branch=master)  
+[![Build Status](https://travis-ci.org/djhvscf/hangman_game.svg?branch=master)](https://travis-ci.org/djhvscf/hangman_game)
 
-Angular JS
+Hangman Game develop with Angular JS
