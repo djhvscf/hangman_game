@@ -1,6 +1,7 @@
 language: node_js
+
 node_js:
-  - '0.10'
-notifications:
-  email:
-    - djhv92@hotmail.com
+  - "0.10"
+  
+before_install:
+    - npm install grunt-cli -g

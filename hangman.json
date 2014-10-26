@@ -1,0 +1,28 @@
+{
+    "name": "Hangman game",
+    "version": "1.0.0",
+    "title": "Hangman game",
+    "description": "Hangman game with Angular JS",
+    "author": {
+        "name": "Dennis Heránadez Vargas",
+        "email": "djhv92@hotmail.com",
+        "url": "http://djhvscf.github.io/Blog"
+    },
+    "licenses": [
+        {
+            "type": "MIT License",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.7"
+    },
+    "keywords": ["hangman"],
+    "homepage": "https://github.com/djhvscf/hangman_game",
+    "demo": "http://djhvscf.github.io/hangman_game/",
+    "bugs": {
+        "url": "https://github.com/djhvscf/hangman_game"
+    },
+    "docs": "https://github.com/djhvscf/hangman_game",
+    "download": "https://github.com/djhvscf/hangman_game"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "hangman_game",
+  "version": "1.0.0",
+  "homepage": "https://github.com/djhvscf/hangman_game",
+  "authors": [
+    "djhvscf <djhv92@hotmail.com>"
+  ],
+  "description": "Hangman game with Angular JS",
+  "main": [
+      "src/app.js"
+  ],
+  "keywords": [
+    "hangman",
+    "game"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "docs",
+    "assets"
+  ]
+}
