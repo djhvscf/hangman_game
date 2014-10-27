@@ -7,12 +7,27 @@ angular.module('ahorcado.wordsStackService', [])
         var wordsStack = ['chonco','proyecto','navidadsinti','chucknorris','tangamandapio'];
         return {
             getWordsStack: function (index) {
-                //return wordsStack[Math.floor((Math.random()*wordsStack.length))];//Todo Random
-                return wordsStack[index];
+                RandomWord();
+				return wordsStack[Math.floor((Math.random()*wordsStack.length))];
             },
             getLengthWordsStack: function()
             {
                 return wordsStack.length;
             }
         };
+		
+		function RandomWord() {
+        var requestStr = "http://randomword.setgetgo.com/get.php";
+
+			$.ajax({
+				type: "GET",
+				url: requestStr,
+				dataType: "jsonp",
+				success: RandomWordComplete
+			});
+		}
+
+		function RandomWordComplete(data) {
+			wordsStack.push(data.Word.trim());
+		}
     });
